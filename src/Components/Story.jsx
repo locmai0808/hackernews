@@ -27,6 +27,7 @@ export class Story extends Component {
           promises.push(this.getStory(e[i]));
         }
         Promise.all(promises).then(data => {
+          console.log(data);
           this.setState({
             data: data,
             gotData: true
@@ -52,7 +53,7 @@ export class Story extends Component {
                 </Card.Title>
                 <Card.Text>{props.text}</Card.Text>
                 <footer className="blockquote-footer">
-                  {moment(props.time).format("MMM Do YY")}
+                  {moment(props.time * 1000).format("MMM Do YY")}
                 </footer>
               </Card.Body>
             </Card>
