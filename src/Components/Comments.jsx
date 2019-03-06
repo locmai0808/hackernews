@@ -45,7 +45,12 @@ export class Comments extends Component {
         return (
           <Col md={12}>
             <Card>
-              <p>{props.text}</p>
+              <Card.Body>
+                <Card.Title>
+                  <h5>By {props.by}</h5>
+                </Card.Title>
+                <Card.Text>{props.text}</Card.Text>
+              </Card.Body>
             </Card>
           </Col>
         );
