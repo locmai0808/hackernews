@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Col, Row, Card } from "react-bootstrap";
 import moment from "moment";
-
+import { Link } from "react-router-dom";
 export class Story extends Component {
   constructor(props) {
     super(props);
@@ -52,6 +52,12 @@ export class Story extends Component {
                   <h5>{props.title}</h5>
                 </Card.Title>
                 <Card.Text>{props.text}</Card.Text>
+                {props.kids ? (
+                  <Link to={`/comments/${props.id}`}>
+                    {props.kids.length} + " comments"
+                  </Link>
+                ) : null}
+                <p>{props.id}</p>
                 <footer className="blockquote-footer">
                   {moment(props.time * 1000).format("MMM Do YY")}
                 </footer>
