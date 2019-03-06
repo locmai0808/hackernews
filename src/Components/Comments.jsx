@@ -43,7 +43,7 @@ export class Comments extends Component {
     if (this.state.gotComments) {
       comments = this.state.comments.map((props, key) => {
         return (
-          <Col md={12}>
+          <Col md={12} id={key}>
             <Card>
               <Card.Body>
                 <Card.Title>
