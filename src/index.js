@@ -1,12 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { createHashHistory } from "history";
+import { Router, Route, Switch } from "react-router-dom";
+import Story from "./Components/Story.jsx";
+import Comments from "./Components/Comments.jsx";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const hist = createHashHistory();
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <Router history={hist}>
+    <Switch>
+        <Route exact path="/" component={Story} />
+        <Route exact path="/comments/:storyid" component ={Comments} /> 
+    </Switch>
+  </Router>,
+  document.getElementById("root")
+);

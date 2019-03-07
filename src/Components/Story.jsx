@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 export class Story extends Component {
   constructor(props) {
     super(props);
-    this.objArr = [];
     this.state = {
       data: [],
       gotData: false
