@@ -42,7 +42,7 @@ export class Comments extends Component {
     let comments = null;
     if (this.state.gotComments) {
       comments = this.state.comments.map((props, key) => {
-        return (
+        return props.text ? (
           <Col md={12} id={key}>
             <Card>
               <Card.Body>
@@ -53,7 +53,7 @@ export class Comments extends Component {
               </Card.Body>
             </Card>
           </Col>
-        );
+        ) : null;
       });
     }
     return <Row>{comments}</Row>;

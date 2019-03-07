@@ -54,7 +54,7 @@ export class Story extends Component {
                 <Card.Text>{props.text}</Card.Text>
                 {props.kids ? (
                   <Link to={`/comments/${props.id}`}>
-                    {props.kids.length} + " comments"
+                    {props.kids.length} comments
                   </Link>
                 ) : null}
                 <p>{props.id}</p>
