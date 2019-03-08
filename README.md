@@ -2,6 +2,7 @@
 `https://hacker-news.firebaseio.com/v0/askstories.json?print=pretty` to get Stories ID
 `https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty` to get details of story
 
+## hackernews.lnmai.com
 
 ## Available Scripts
 
